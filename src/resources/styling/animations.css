@@ -1,0 +1,61 @@
+.bird-flying {
+    height: 250px;
+    width: 275px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation-name: birdFlying;
+    animation-duration: 5s;
+    Transition-delay: 2s;  
+}
+
+
+@keyframes birdFlying {
+    /* Start the animation from the Top Right Corner */
+    0% {
+        top: 0px;
+        right: 0px;
+    }
+    25% {
+         /* Transition to Top Center*/
+         top: 0;     
+         left: 50%;
+    }
+    50% {
+        /* Transition to Top Left Corner */
+        top: 8px;
+        left: 16px;
+
+        /* Flip Image */
+        transform: scaleX(-1);
+    }
+    75% {
+         /* Transition to the Center */
+        top: 50%;
+        left: 50%;
+    }
+    /* Move the animation to the Bottom Left Corner */
+    100% {
+        top: 100vh; 
+        left: 0; 
+    }
+}
+
+.language-icon {
+    height: 90px;
+    width: 100px;
+}
+
+/* When User hovers over Language Icon, then animation plays */
+.language-icon:hover {
+    animation: flip 3s;
+}
+
+@keyframes flip {
+    50% {
+        transform: scaleX(-1);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}

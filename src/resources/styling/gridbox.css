@@ -1,0 +1,26 @@
+
+/* Allows for the Division of the Website into the Grid Layout */
+.grid-container {
+    Display: grid;
+    padding: 15x;
+    grid-template-columns: auto auto auto;
+}
+
+.single-grid-container {
+    Display: grid;
+    grid-template-columns: auto;
+}
+
+.double-grid-container {
+    Display: grid;
+    padding: 15x;
+    grid-template-columns: auto auto;
+}
+
+
+
+.center-grid {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}

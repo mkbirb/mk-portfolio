@@ -1,0 +1,57 @@
+.navbar {
+    position: fixed;
+    top: 0  
+}
+
+.description {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+}
+
+.landing-background {
+    background-image: url("../images/blue-squares.gif");
+    background-size: cover;
+}
+
+.language-card {
+  border-radius: 25px;
+  background: #94eefc;
+  height: 100px;
+  width: 200px;
+}
+
+.language-flag {
+  background-image: url("../images/blue-flag.png");
+  height: 100px;
+  width: 300px;
+  background-size: fill;
+}
+
+
+button {
+    background: none;
+    border: 5px solid black;
+    padding: 1.5rem 3rem;
+    box-shadow: 5px 5px red, 10px 10px black, inset 5px 5px white, inset 10px 10px black;
+    font-family: -system-ui, sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    position: relative;
+  }
+  button::before, button::after {
+    content: "";
+    position: absolute;
+    background: black;
+  }
+  button::before {
+    top: 100%;
+    left: 5px;
+    height: 10px;
+    width: 5px;
+  }
+  button::after {
+    left: 100%;
+    top: 5px;
+    height: 5px;
+    width: 10px;
+  }
