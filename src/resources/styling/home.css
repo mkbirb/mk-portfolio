@@ -55,3 +55,14 @@ button {
     height: 5px;
     width: 10px;
   }
+  
+  /* Styling for the images that are not selected by the User */
+  .non-selected-certificates {
+    height: 300px;
+    width: 350px;
+  }
+
+  .selected-certificate {
+    height: 500px;
+    width: 750px;
+  }
