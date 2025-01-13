@@ -8,7 +8,7 @@ function Certificates() {
 
     /* Create a list of Certificates for the Gallery */
 
-    const certificateList = [
+    const [certificateList, setCertificateList] = useState([
         {
             certificateName: "Angular Certificate",
             date: "December 2024",
@@ -28,7 +28,38 @@ function Certificates() {
             image: require('../resources/images/javascriptintermediate-certificate.jpg')
         }
     
-    ]
+    ])
+
+    // Helper Function for the Sorting Methods
+    const parseDate = (dateString) => {
+        const [month, year] = dateString.split(" ");
+        // No specific Date of the Month given, means the first Number of the Month would be used instead
+        return new Date(`${month} 1, ${year}`);
+    };
+    
+    // Sorting Methods for the Certificates
+    const handleCertificateSorting = (optionSelected) => {
+        let sortedList = [];
+
+        if (optionSelected === "Alphabetical Name") {
+            sortedList = [...certificateList].sort((a, b) => 
+                a.certificateName.toLowerCase().localeCompare(b.certificateName));
+        }
+        else if (optionSelected === "Ascending Date") {
+            sortedList = [...certificateList].sort((a, b) => 
+                // If result is Negative then 'a' would be older
+                parseDate(a.date) -  parseDate(b.date));
+        }
+        else if (optionSelected === "Descending Date") {
+            // Reverse Sorting Method used for Ascending Date
+            sortedList = [...certificateList].sort((a, b) => 
+                parseDate(b.date) - parseDate(a.date));
+        }
+        
+        // Update the Certificate List
+        setCertificateList(sortedList);
+
+    }
 
     function SelectedCertificates(props) {
         return (
@@ -61,6 +92,15 @@ function Certificates() {
                 </div>
                 <div className='grid-item center-grid enlarged-certificate'>
                     {(certificateSelected == null) ? "": (<SelectedCertificates source = {certificateSelected} name = "image" />)}
+                </div>
+                <div className='grid-item center-grid' style = {{padding: '20px'}}>
+                    <select className = "sorting-dropbox" onChange={(e) => {
+                        handleCertificateSorting(e.target.value);
+                    }}>
+                        <option value="Alphabetical Name" selected> Sort By: Alphabetical Name </option>
+                        <option value="Ascending Date"> Sort By: Ascending Date </option>
+                        <option value="Descending Date"> Sort By: Descending Date </option>
+                    </select>
                 </div>
             </div>
             <div className='grid-container'>
