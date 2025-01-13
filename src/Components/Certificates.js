@@ -20,6 +20,12 @@ function Certificates() {
             date: "July 2024",
             credentialID: "CC-BBHGDWBZ",
             image: require('../resources/images/introtojavascript-certificate.jpg')
+        },
+        {
+            certificateName: "Javascript Intermediate",
+            date: "March 2024",
+            credentialID: "CC-BH8T8MTX",
+            image: require('../resources/images/javascriptintermediate-certificate.jpg')
         }
     
     ]
@@ -45,37 +51,44 @@ function Certificates() {
 
     return (
         <>
-        <p> Certificates </p>
-        <p> Select Certificate to enlarge</p>
-        <div className='single-grid-container' ref = {enlargedCertificate}>
-            <div className='grid-item center-grid'>
-                {(certificateSelected == null) ? "": (<SelectedCertificates source = {certificateSelected} name = "image" />)}
-            </div>
-        </div>
-        <div className='grid-container'>
-            {/* Lists all the Certificates including the ones that have been selected */ }
-            {certificateList.map((certificate, index) => (
-                <>
-                <div className='single-grid-container' key={index}>
-                    <div className='grid-item center-grid'>
-                        <img 
-                            className = "non-selected-certificates" 
-                            src = {certificate.image} 
-                            alt = {certificate.certificateName} 
-                            onClick = {() => handleCertificateSelected(certificate.image)}/>
-                    </div>
-                    <div className='grid-item center-grid'>
-                        <p> Certificate Name: {certificate.certificateName} </p>
-                    </div>
-                    <div className='grid-item center-grid'>
-                        <p> Date: {certificate.date} </p>
-                    </div>
-                    <div className='grid-item center-grid'>
-                        <p> Credential ID: {certificate.credentialID} </p>
-                    </div>
+        <div className='certificates-section' >
+            <div className='single-grid-container' ref = {enlargedCertificate}>
+                <div className='grid-item center-grid'>
+                    <p className='section-title'> Certificates </p>
                 </div>
-                </>
-            ))}
+                <div className='grid-item center-grid'>
+                    <p className='description'> Select Certificate to enlarge</p>
+                </div>
+                <div className='grid-item center-grid enlarged-certificate'>
+                    {(certificateSelected == null) ? "": (<SelectedCertificates source = {certificateSelected} name = "image" />)}
+                </div>
+            </div>
+            <div className='grid-container'>
+                {/* Lists all the Certificates including the ones that have been selected */ }
+                {certificateList.map((certificate, index) => (
+                    <>
+                    <div className='single-grid-container' key={index}>
+                        <div className='grid-item center-grid'>
+                            <img 
+                                className = "non-selected-certificates" 
+                                src = {certificate.image} 
+                                alt = {certificate.certificateName} 
+                                onClick = {() => handleCertificateSelected(certificate.image)}/>
+                        </div>
+                        <div className='grid-item center-grid'>
+                            <p className='certificates-details'> <b> Certificate Name: </b> {certificate.certificateName} </p>
+                        </div>
+                        <div className='grid-item center-grid'>
+                            <p className='certificates-details'> <b> Date: </b> {certificate.date} </p>
+                        </div>
+                        <div className='grid-item center-grid'>
+                            <p className='certificates-details'> <b> Credential ID: </b> {certificate.credentialID} </p>
+                        </div>
+                    </div>
+                    </>
+                ))}
+            
+            </div>
         </div>
 
         </>
