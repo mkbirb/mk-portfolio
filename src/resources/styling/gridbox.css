@@ -17,6 +17,11 @@
     grid-template-columns: auto auto;
 }
 
+.software-experiences-box {
+    background-color: rgb(255, 178, 36);
+    border-radius: 20px;
+}
+
 
 
 .center-grid {
