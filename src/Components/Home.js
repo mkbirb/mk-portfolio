@@ -7,6 +7,7 @@ import Navbar from './Navbar';
 import Languages from './Languages';
 import Certificates from './Certificates';
 import SoftwareExperiences from './SoftwareExperiences';
+import WorkExperiences from './WorkExperiences';
 
 function Home() {
     return (
@@ -15,13 +16,13 @@ function Home() {
             <Languages />
             <Certificates />
             <SoftwareExperiences />
+            <WorkExperiences />
             <div className="single-grid-container center-grid">
                 <img className="bird-flying" src={BirdImage} alt = "Bird Image"/>
             </div>
             <div className="single-grid-container center-grid">
                 <p> Matthew Kristanto</p>
             </div>
-            <p> Work Experience</p>
             <p> Skills</p>
             <p> Achievements</p>
             <p> Projects </p>

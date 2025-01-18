@@ -2,7 +2,6 @@
 /* Allows for the Division of the Website into the Grid Layout */
 .grid-container {
     Display: grid;
-    padding: 15x;
     grid-template-columns: auto auto auto;
 }
 
@@ -13,7 +12,6 @@
 
 .double-grid-container {
     Display: grid;
-    padding: 15x;
     grid-template-columns: auto auto;
 }
 
