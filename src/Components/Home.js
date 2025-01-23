@@ -14,13 +14,27 @@ import Achievements from './Achievements';
 function Home() {
     return (
         <>
-            <Navbar />
-            <Languages />
-            <Certificates />
-            <SoftwareExperiences />
-            <WorkExperiences />
-            <Skills />
-            <Achievements />
+            <div>
+                <Navbar />
+                <div id='languages'>
+                    <Languages />
+                </div>
+                <div id='certificates'>
+                    <Certificates />
+                </div>
+                <div id='softwareExperiences'>
+                    <SoftwareExperiences />
+                </div>
+                <div id='workExperiences'>
+                    <WorkExperiences />
+                </div>
+                <div id='skills'>
+                    <Skills />
+                </div>
+                <div id='achievements'>
+                    <Achievements/>
+                </div>
+            </div>
             <div className="single-grid-container center-grid">
                 <img className="bird-flying" src={BirdImage} alt = "Bird Image"/>
             </div>

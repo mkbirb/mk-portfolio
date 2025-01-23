@@ -1,6 +1,22 @@
 .navbar {
     position: fixed;
-    top: 0  
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-button {
+  background-color: rgb(255, 142, 22);
+  font-family: cursive;
+  font-weight: bold;
+  color: white;
+  font-size: xx-large;
+  text-decoration: underline dashed rgb(255, 255, 255);
+  cursor: grab;
 }
 
 .section-title {
@@ -44,8 +60,7 @@ button {
     padding: 1.5rem 3rem;
     box-shadow: 5px 5px red, 10px 10px black, inset 5px 5px white, inset 10px 10px black;
     font-family: -system-ui, sans-serif;
-    font-weight: bold;
-    font-size: 2rem;
+    font-size: 20px;
     position: relative;
   }
   button::before, button::after {
@@ -63,7 +78,7 @@ button {
     left: 100%;
     top: 5px;
     height: 5px;
-    width: 10px;
+    width: 5px;
   }
   
   /* Styling for the images that are not selected by the User */
@@ -241,5 +256,17 @@ button {
 
   .achievement-list {
     padding-bottom: 20px;
+  }
+
+
+  .navbar-buttons {
+    background-color: rgb(255, 174, 0);
+    font-family: Bradley Hand, cursive;
+    font-weight: bold;
+    color: white;
+    width: 200px;
+    text-decoration: underline dashed rgb(255, 255, 255);
+    height:  100px;
+    cursor: grab;
   }
 
