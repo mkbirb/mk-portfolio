@@ -9,6 +9,7 @@ import Certificates from './Certificates';
 import SoftwareExperiences from './SoftwareExperiences';
 import WorkExperiences from './WorkExperiences';
 import Skills from './Skills';
+import Achievements from './Achievements';
 
 function Home() {
     return (
@@ -19,13 +20,13 @@ function Home() {
             <SoftwareExperiences />
             <WorkExperiences />
             <Skills />
+            <Achievements />
             <div className="single-grid-container center-grid">
                 <img className="bird-flying" src={BirdImage} alt = "Bird Image"/>
             </div>
             <div className="single-grid-container center-grid">
                 <p> Matthew Kristanto</p>
             </div>
-            <p> Achievements</p>
             <p> Projects </p>
             <p> Sunshine for</p>
             <p> Sunshine for</p>
