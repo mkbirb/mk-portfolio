@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashLink as Link } from "react-router-hash-link";
-import '../resources/styling/home.css';
+import '../resources/styling/navbar.css';
 
 function Navbar() {
     function scrollWithOffset(el) {

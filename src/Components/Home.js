@@ -11,6 +11,7 @@ import WorkExperiences from './WorkExperiences';
 import Skills from './Skills';
 import Achievements from './Achievements';
 import Projects from './Projects';
+import ScrollToTop from './ScrollToTop';
 
 function Home() {
     return (
@@ -38,6 +39,7 @@ function Home() {
                 <div id='projects'>
                     <Projects/>
                 </div>
+                <ScrollToTop/>
             </div>
             <div className="single-grid-container center-grid">
                 <img className="bird-flying" src={BirdImage} alt = "Bird Image"/>
