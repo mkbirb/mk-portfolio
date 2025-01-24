@@ -10,6 +10,7 @@ import SoftwareExperiences from './SoftwareExperiences';
 import WorkExperiences from './WorkExperiences';
 import Skills from './Skills';
 import Achievements from './Achievements';
+import Projects from './Projects';
 
 function Home() {
     return (
@@ -33,6 +34,9 @@ function Home() {
                 </div>
                 <div id='achievements'>
                     <Achievements/>
+                </div>
+                <div id='projects'>
+                    <Projects/>
                 </div>
             </div>
             <div className="single-grid-container center-grid">
