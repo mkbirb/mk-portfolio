@@ -1,0 +1,46 @@
+.contact-box {
+    background-color: black;
+    text-align: center;
+}
+
+.contact-form {
+    background-color: aliceblue;
+    border-radius: 10px;
+    border: 10px orange solid;
+    width: 55vw;
+}
+
+.contact-form label {
+    color: black;
+    font-family: Courier New, monospace;
+    font-size: 25px;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.contact-form input {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: 5px rgb(0, 0, 0) solid;
+    font-size: 25px;
+    width: 30vw;
+    padding-top: 10px;
+}
+
+.contact-form textarea {
+    width: 50vw;
+    font-size: 17px;
+    border: 5px rgb(0, 0, 0) solid;
+    resize: none;
+}
+
+.contact-form button {
+    background-color: rgb(255, 233, 111);
+    border-radius: 10px;
+    border: 5px rgb(0, 0, 0) solid;
+    cursor: pointer;
+    font-family: Courier New, monospace;
+    font-size: 30px;
+    color: black;
+    font-weight: bolder;
+}

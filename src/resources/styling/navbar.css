@@ -7,6 +7,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    /* Make sure that the Navbar is ontop of every other element of the Website */
+    z-index: 100;
 }
 
 .home-button {
@@ -16,7 +18,7 @@
   color: white;
   font-size: xx-large;
   text-decoration: underline dashed rgb(255, 255, 255);
-  cursor: grab;
+  cursor: pointer;
 }
 
 .navbar-buttons {
@@ -27,7 +29,7 @@
     width: 200px;
     text-decoration: underline dashed rgb(255, 255, 255);
     height:  100px;
-    cursor: grab;
+    cursor: pointer;
   }
 
 .scroll-to-top {
@@ -35,6 +37,7 @@
     bottom: 20px;
     right: 20px;
     background-color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 .scroll-to-top img {
