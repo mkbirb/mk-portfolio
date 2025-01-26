@@ -13,6 +13,7 @@ import Achievements from './Achievements';
 import Projects from './Projects';
 import Contact from './Contact';
 import ScrollToTop from './ScrollToTop';
+import Socials from './Socials';
 
 function Home() {
     return (
@@ -41,6 +42,7 @@ function Home() {
                     <Projects/>
                 </div>
                 <ScrollToTop/>
+                <Socials/>
                 <Contact />
             </div>
             <div className="single-grid-container center-grid">
