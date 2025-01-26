@@ -23,11 +23,11 @@ function Home() {
                 <div id='languages'>
                     <Languages />
                 </div>
-                <div id='certificates'>
-                    <Certificates />
-                </div>
                 <div id='softwareExperiences'>
                     <SoftwareExperiences />
+                </div>
+                <div id='certificates'>
+                    <Certificates />
                 </div>
                 <div id='workExperiences'>
                     <WorkExperiences />

@@ -1,0 +1,21 @@
+.software-experiences-box {
+    background-color: rgb(255, 178, 36);
+    border-radius: 20px;
+}
+
+
+.software-experiences-section {
+    background-color: black;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.software-experiences img {
+    padding: 20px;
+    height: 60px;
+    width: 70px;
+}
+
+.software-experiences div {
+    width: 100px;
+}
