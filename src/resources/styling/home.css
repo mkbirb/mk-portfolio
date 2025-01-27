@@ -60,43 +60,6 @@ button {
     width: 5px;
   }
   
-  /* Styling for the images that are not selected by the User */
-  .non-selected-certificates {
-    height: 200px;
-    width: 250px;
-  }
-
-  .selected-certificate {
-    height: 500px;
-    width: 750px;
-  }
-
-  .enlarged-certificate {
-    padding: 30px;
-
-  }
-
-  /* Style the actual image of the Certificate */
-  .enlarged-certificate img{
-    border: 30px, solid, brown;
-  }
-
-  .certificates-section {
-    background-Image: url('../images/cyan-tilted-columns.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .certificates-details {
-    font-family: Consolas;
-    font-size: 20px;
-  }
-
-  .sorting-dropbox {
-    font-size: 30px;
-    border: 3px solid black;
-    border-radius: 12px;
-  }
 
   .work-type-logo {
     height: 55px;

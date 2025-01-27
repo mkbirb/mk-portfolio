@@ -1,9 +1,11 @@
 import React, { useEffect, useState, useRef } from 'react';
 import '../resources/styling/gridbox.css';
+import '../resources/styling/certificates.css';
 
 function Certificates() {
 
     const [certificateSelected, setCertificateSelected] = useState(null);
+    const [viewAllCertificates, setViewAllCertificates] = useState(false);
     const enlargedCertificate = useRef(null);
 
     /* Create a list of Certificates for the Gallery */
@@ -16,7 +18,7 @@ function Certificates() {
             image: require('../resources/images/angular-certificate.jpg')
         },
         {
-            certificateName: "Introduction to Programming Using JavaScript",
+            certificateName: "Introduction to JavaScript",
             date: "July 2024",
             credentialID: "CC-BBHGDWBZ",
             image: require('../resources/images/introtojavascript-certificate.jpg')
@@ -26,7 +28,20 @@ function Certificates() {
             date: "March 2024",
             credentialID: "CC-BH8T8MTX",
             image: require('../resources/images/javascriptintermediate-certificate.jpg')
-        }
+        },
+        {
+            certificateName: "Introduction to HTML",
+            date: "April 2023",
+            credentialID: "CC-90KAKTVC",
+            image: require('../resources/images/intro-to-html-certificate.jpg')
+        },
+        {
+            certificateName: "Web Development",
+            date: "February 2024",
+            credentialID: "CC-WWUOEDB9",
+            image: require('../resources/images/web-development-certificate.jpg')
+        },
+
     
     ])
 
@@ -79,6 +94,20 @@ function Certificates() {
         }, 1000);
     }
 
+    const handleViewAllCertificates = (e) => {
+        const button = e.target;
+        const newState = !viewAllCertificates;
+
+        setViewAllCertificates(newState);
+
+        if (newState == true) {
+            button.innerText = "Show Less";
+        }
+        else if (newState == false){
+            button.innerText = "Show More";
+        }
+    }
+
 
     return (
         <>
@@ -105,7 +134,9 @@ function Certificates() {
             </div>
             <div className='grid-container'>
                 {/* Lists all the Certificates including the ones that have been selected */ }
-                {certificateList.map((certificate, index) => (
+                {certificateList
+                .slice(0, viewAllCertificates ? certificateList.length : 3)
+                .map((certificate, index) => (
                     <>
                     <div className='single-grid-container' key={index}>
                         <div className='grid-item center-grid'>
@@ -126,8 +157,11 @@ function Certificates() {
                         </div>
                     </div>
                     </>
-                ))}
-            
+                ))}            
+            </div>
+            <div className='grid-item center-grid'>
+                {/* Allows for viewing of all Certificates */}
+                    <button onClick={handleViewAllCertificates}> Show More </button>
             </div>
         </div>
 
