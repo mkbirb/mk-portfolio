@@ -1,22 +1,19 @@
-import React from 'react';
+import React, { useContext } from "react";
 import { HashLink as Link } from "react-router-hash-link";
+import { OffsetScroll } from "./Home.js";
 import '../resources/styling/navbar.css';
 
 function Navbar() {
-    function scrollWithOffset(el) {
-        // Pixel Offset, so that when a Component/Section is navigated to, the view goes a few pixels
-        // Above the Componenet, so none of the contents are cut off by the Navbar
-        const yOffset = -115; 
-        const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
-        window.scrollTo({ top: y, behavior: "smooth" });
-    }
+
+    const { scrollWithOffset } = useContext(OffsetScroll);
 
     function LinkNavigation(props) {
         return (
             <>
-                <Link to={`#${props.idName}`} smooth scroll={(el) => scrollWithOffset(el)}>
+                <Link to={`#${props.idName}`} smooth scroll={scrollWithOffset}>
                     <button className='navbar-buttons'> {props.title} </button>
                 </Link>
+
             </>
         )
     }

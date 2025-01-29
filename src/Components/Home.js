@@ -4,6 +4,7 @@ import '../resources/styling/gridbox.css';
 import '../resources/styling/animations.css';
 import '../resources/styling/home.css';
 import Navbar from './Navbar';
+import About from './About';
 import Languages from './Languages';
 import Certificates from './Certificates';
 import SoftwareExperiences from './SoftwareExperiences';
@@ -15,11 +16,27 @@ import Contact from './Contact';
 import ScrollToTop from './ScrollToTop';
 import Socials from './Socials';
 
+function scrollWithOffset(el) {
+    // Pixel Offset, so that when a Component/Section is navigated to, the view goes a few pixels
+    // Above the Componenet, so none of the contents are cut off by the Navbar
+    const yOffset = -115; 
+    const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+}
+
+const OffsetScroll = React.createContext();
+
+
 function Home() {
     return (
         <>
             <div>
-                <Navbar />
+                <OffsetScroll.Provider value={{scrollWithOffset}}>
+                    <Navbar />
+                    <div id='about'>
+                        <About />
+                    </div>
+                </OffsetScroll.Provider>
                 <div id='languages'>
                     <Languages />
                 </div>
@@ -51,38 +68,10 @@ function Home() {
             <div className="single-grid-container center-grid">
                 <p> Matthew Kristanto</p>
             </div>
-            <p> Projects </p>
-            <p> Sunshine for</p>
-            <p> Sunshine for</p>
-            <p> Sunshine for</p>
-            <p> Sunshine for</p>
-            <p> Sunshine for</p>
-            <p> Sunshine for</p>
-            <p> Sunshine for</p>
-            <p> Sunshine for</p>
-            <p> Sunshine for</p>
-            <p> Sunshine for</p>
-            <p> Sunshine for</p>
-            <p> Sunshine for</p>
-            <p> Sunshine for</p>
-            <p> Sunshine for</p>
-            <p> Sunshine for</p>
-            <p> Sunshine for</p>
-            <p> Sunshine for</p>
-            <p> Sunshine for</p>
-            <p> Sunshine for</p>
-            <p> Sunshine for</p>
-            <p> Sunshine for</p>
-            <p> Sunshine for</p>
-            <p> Sunshine for</p>
-            <p> Sunshine for</p>
-            <p> Sunshine for</p>
-            <p> Sunshine for</p>
-            <p> Sunshine for</p>
-            <p> Sunshine for</p>
-
         </>
     );
 }
 
 export default Home;
+
+export { OffsetScroll };

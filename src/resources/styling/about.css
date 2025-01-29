@@ -1,0 +1,78 @@
+.about-section {
+    padding-top: 100px;
+    background-image: url('../images/orange-blob-animation.gif');
+    background-size: cover;
+    height: 100vh;
+
+}
+
+.about-section img {
+    width: 350px; 
+    height: 350px; 
+    border-radius: 50%; 
+    border: 15px dotted yellow;
+    box-shadow: 0 0 50px 15px yellow
+}
+
+.about-section p {
+    color: white;
+}
+
+.about-section button {
+    background-color: rgb(83, 146, 164);
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+    text-decoration: underline solid white;
+    cursor: pointer;
+    
+}
+
+.title-name {
+    font-family: Consolas;
+    font-size: 70px;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline dashed orangered;
+}
+
+.quote {
+    background-color: rgb(158, 234, 255);
+    border: 5px solid black;
+    padding: 1.5rem 3rem;
+    box-shadow: 5px 5px rgb(0, 60, 255), 10px 10px black, inset 5px 5px white, inset 10px 10px black;
+    font-family: Consolas, sans-serif;
+    font-size: 2vw;
+    position: relative;
+    width: 35vw;
+    height: 3vw;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+  }
+
+  .self-description {
+    background-color: rgb(255, 134, 134);
+    border: 5px solid black;
+    padding: 1.5rem 3rem;
+    box-shadow: 5px 5px rgb(255, 221, 0), 10px 10px black, inset 5px 5px white, inset 10px 10px black;
+    font-family: Consolas, sans-serif;
+    font-size: 1vw;
+    position: relative;
+    width: 35vw;
+    height: 10vw;
+    text-align: center;
+  }

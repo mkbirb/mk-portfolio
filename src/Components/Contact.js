@@ -46,7 +46,7 @@ function Contact() {
 
     return (
         <>
-            <div className='contact-box'>
+            <div className='contact-box' id = "contact">
                 <form onSubmit={handleSubmit}>
                     <div className='double-grid-container'>
                             <div className='grid-item'>
