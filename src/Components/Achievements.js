@@ -1,6 +1,7 @@
 import React from 'react';
 import '../resources/styling/gridbox.css';
 import '../resources/styling/animations.css';
+import '../resources/styling/achievements.css';
 import ADFCertificate from '../resources/images/ADF-certificate-2022.jpg';
 import GlobalInnovatorAward from '../resources/images/global-innovator-award-2021.jpg';
 
