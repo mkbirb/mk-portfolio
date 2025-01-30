@@ -13,24 +13,6 @@
     color: white;
 }
 
-.landing-background {
-    background-image: url("../images/blue-squares.gif");
-    background-size: cover;
-}
-
-.language-card {
-  border-radius: 25px;
-  background: #94eefc;
-  height: 100px;
-  width: 200px;
-}
-
-.language-flag {
-  background-image: url("../images/blue-flag.png");
-  height: 100px;
-  width: 300px;
-  background-size: fill;
-}
 
 
 button {
