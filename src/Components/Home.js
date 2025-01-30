@@ -28,6 +28,10 @@ const OffsetScroll = React.createContext();
 
 
 function Home() {
+    <head>
+        {/* Website Favicon */}
+        <link rel="icon" type="image/png" href="%PUBLIC_URL%/mk-favicon.png" />
+    </head>
     return (
         <>
             <div>

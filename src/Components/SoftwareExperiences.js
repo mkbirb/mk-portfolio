@@ -15,6 +15,7 @@ import GoogleDriveIcon from '../resources/images/google-drive-logo.png';
 import MiroIcon from '../resources/images/miro-logo.png';
 import GoogleSitesIcon from '../resources/images/google-sites-logo.png';
 import WeeblyIcon from '../resources/images/weebly-logo.png';
+import SpringbootIcon from '../resources/images/springboot-logo.png';
 
 
 function SoftwareExperiences() {
@@ -27,7 +28,7 @@ function SoftwareExperiences() {
                         <img src={props.image} alt= {`${props.name} Icon`} />
                     </div>
                     <div className='grid-item center-grid'>
-                        <p> {props.name} </p>
+                        <p className='software-titles'> {props.name} </p>
                     </div>
                 </div>
             </>
@@ -78,6 +79,9 @@ function SoftwareExperiences() {
                                 </div>
                                 <div className='grid-item center-grid'>
                                     <IndividualSoftware name = "Google Drive" image = {GoogleDriveIcon} />
+                                </div>
+                                <div className='grid-item center-grid'>
+                                    <IndividualSoftware name = "Springboot" image = {SpringbootIcon} />
                                 </div>
                                 <div className='grid-item center-grid'>
                                     <IndividualSoftware name = "Miro" image = {MiroIcon} />

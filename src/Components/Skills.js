@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../resources/styling/gridbox.css';
+import '../resources/styling/skills.css';
 import Communication from '../resources/images/communication.png';
 import Teaching from '../resources/images/teaching.png';
 import Teamwork from '../resources/images/teamwork.png';

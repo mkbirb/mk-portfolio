@@ -1,5 +1,6 @@
 import React from 'react';
 import '../resources/styling/gridbox.css';
+import '../resources/styling/workExperiences.css';
 import BelgraviaLeisure from '../resources/images/belgravia-leisure-logo.png';
 import Encompass from '../resources/images/encompass-church-logo.jpg';
 import PaidLogo from '../resources/images/paid.png';

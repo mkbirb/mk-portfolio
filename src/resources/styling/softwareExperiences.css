@@ -10,6 +10,14 @@
     padding-bottom: 50px;
 }
 
+.software-titles {
+    font-family: Consolas, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+
+}
+
 .software-experiences img {
     padding: 20px;
     height: 60px;
